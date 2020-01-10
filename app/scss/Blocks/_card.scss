@@ -1,0 +1,78 @@
+.card {
+  margin: 20px 0;
+  position: relative;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card--new {
+  &::before {
+    content: 'new';
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    padding: 10px;
+    width: 175px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $green;
+    transform: rotate(-45deg);
+  }
+}
+
+.card__img {
+  height: 228px;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card__content {
+  padding: 30px 35px 40px;
+}
+
+.card__title {
+  margin-bottom: 20px;
+  font-family: 'opensansbold', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.card__text {
+  margin-bottom: 25px;
+  font-family: 'opensanslight', sans-serif;
+  font-size: 12px;
+}
+
+.card__price {
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.card__price-text {
+  font-size: 14px;
+}
+
+.card__btn {
+  margin-top: 30px;
+  padding: 11px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.card__icon-cart {
+  display: inline-block;
+  padding-left: 30px;
+  width: 52px;
+}

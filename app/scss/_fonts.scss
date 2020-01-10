@@ -1,0 +1,34 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font ($f-name, $f-style, $f-weight, $f-url) {
+	@font-face {
+		font-family: $f-name;
+		font-style: $f-style;
+		font-weight: $f-weight;
+		src: url($f-url) format('woff2');
+	}
+}
+
+
+@include font('Open Sans', normal, 400, '../fonts/opensans.woff2');
+@include font('Open Sans', italic, 400, '../fonts/opensansitalic.woff2');
+@include font('Open Sans', normal, 700, '../fonts/opensansbold.woff2');
+@include font('Open Sans', normal, 600, '../fonts/opensanssemibold.woff2');
+@include font('Open Sans', normal, 200, '../fonts/opensanslight.woff2');
+
+@font-face {
+  font-family: 'Lemon Tuesday';
+  src: local('Lemon Tuesday'), local('LemonTuesday'), url('../fonts/Lemontuesday.woff2') format('woff2'), url('../fonts/Lemontuesday.woff') format('woff'), url('../fonts/Lemontuesday.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

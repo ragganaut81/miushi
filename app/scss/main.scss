@@ -1,0 +1,61 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	color: #fff;
+  background-color: #bbb;
+}
+
+body {
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 20px;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.button {
+  padding: 11px 30px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: $red;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@import "blocks/header";
+@import "blocks/slider";
+@import "blocks/block";
+@import "blocks/card";

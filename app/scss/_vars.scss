@@ -1,0 +1,23 @@
+// User variables:
+$green: #84c604;
+$red: #fd4f10;
+$blue: #32505a;
+$blue-light: #6b96a5;
+$blue-dark: #1a2d34;
+
+$text: #000000;
+
+// Bootstrap compatible gutter variable => $gutter
+//$grid-gutter-width: 20px;
+//$gutter: $grid-gutter-width;
+
+// // Breakpoints mixin settings (node_modules/bootstrap/scss/mixins/_breakpoints.scss)
+// // Example: +media-breakpoint-down(xs) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
+// // Default variables: node_modules/bootstrap/scss/_variables.scss
+$grid-breakpoints: (xs: 0, sm: 576px, md: 798px, lg: 992px, xl: 1230px);
+$container-max-widths: (
+  sm: 540px,
+  md: 750px,
+  lg: 960px,
+  xl: 1170px
+)
