@@ -1,0 +1,35 @@
+.extra {
+  padding-top: 60px;
+  background-image: url(../images/bg-stock.png);
+  background-repeat: no-repeat;
+}
+
+.extra__title {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #a6a6a6;
+  border: none;
+  outline: none;
+  background: none;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.extra__title--active {
+  color: $red;
+}
+
+.extra__slider {
+  display: none;
+}
+
+.extra__slider--active {
+  display: block;
+}

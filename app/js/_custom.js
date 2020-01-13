@@ -3,6 +3,8 @@
 $(document).ready(function($) {
 
   carousel();
+  extra();
+  extraVisible();
   forms();
 });
 
@@ -22,7 +24,7 @@ function carousel() {
     loop: true,
     nav: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     stagePadding: 5,
     responsive : {
@@ -45,6 +47,15 @@ function carousel() {
   });
 }
 
+function extra(){
+  $('.extra__title:first').addClass('extra__title--active').closest('.extra__content').find('.extra__slider').eq(1).addClass('extra__slider--active');
+  //$('.extra__title--active').closest('.extra__content').find('.extra__slider').eq($(this).index()).addClass('extra__slider--active');
+}
+function extraVisible(){
+  $('.extra__top-line').on('click', '.extra__title:not(.extra__title--active)', function() {
+    $(this).addClass('extra__title--active').siblings().removeClass('extra__title--active').closest('.extra__content').find('.extra__slider').removeClass('extra__slider--active').eq($(this).index()).addClass('extra__slider--active');
+  })
+}
 // Формы
 function forms(){
   $("form").each(function () {

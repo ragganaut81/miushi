@@ -26,6 +26,30 @@
   }
 }
 
+.card--stock {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 10px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: linear-gradient(#f55a48, #d64535);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 36px;
+    background-image: url(../images/svg/fire.svg);
+    background-repeat: no-repeat;
+  }
+}
+
 .card__img {
   height: 228px;
   text-align: center;
