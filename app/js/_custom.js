@@ -48,7 +48,7 @@ function carousel() {
 }
 
 function extra(){
-  $('.extra__title:first').addClass('extra__title--active').closest('.extra__content').find('.extra__slider').eq(1).addClass('extra__slider--active');
+  $('.extra__title:first').addClass('extra__title--active').closest('.extra__content').find('.extra__slider').eq(0).addClass('extra__slider--active');
   //$('.extra__title--active').closest('.extra__content').find('.extra__slider').eq($(this).index()).addClass('extra__slider--active');
 }
 function extraVisible(){
