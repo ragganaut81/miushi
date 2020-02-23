@@ -103,9 +103,15 @@ ul {
       transform: rotate(-135deg);
     }
   }
-  .owl-prev:hover,
-  .owl-next:hover {
-    background-color: #fff;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #fff;
+  &::before {
+    background-color: $green;
+  }
+  &::after {
+    border-color: $green;
   }
 }
 
