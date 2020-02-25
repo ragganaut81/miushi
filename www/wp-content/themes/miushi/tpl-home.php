@@ -1,5 +1,10 @@
 <?php /* Template Name: Home */ ?>
 
+<?php
+  $theme      = get_template_directory();
+  $theme_uri  = get_template_directory_uri();
+?>
+
 <?php get_header(); ?>
 
 <main>
@@ -125,16 +130,16 @@
               <div class="">
                 <div class="card card--<?php echo $item['cat-mark'] -> slug; ?>">
                   <div class="card__img" style="background-image: url(<?php echo $img['url']; ?>);"></div>
-                  <div class="card__content">
-                  <h3 class="card__title"><?php echo $title; ?></h3>
-                  <p class="card__text"><?php echo $text; ?></p>
-                  <span class="card__price"><?php echo moneyformat($price); ?><sup class="card__price-text"> руб.</sup></span>
-                  <button class="card__btn button">В корзину
-                    <div class="card__icon-cart">
-                      <?php echo file_get_contents($theme_uri."/images/svg/cart.svg"); ?>
-                    </div>
-                  </button>
-                </div>
+                    <div class="card__content">
+                    <h3 class="card__title"><?php echo $title; ?></h3>
+                    <p class="card__text"><?php echo $text; ?></p>
+                    <span class="card__price"><?php echo moneyformat($price); ?><sup class="card__price-text"> руб.</sup></span>
+                    <button class="card__btn button">В корзину
+                      <div class="card__icon-cart">
+                        <?php echo file_get_contents($theme_uri."/images/svg/cart.svg"); ?>
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
               <?php endforeach ?>
@@ -143,6 +148,31 @@
           </div>
         <?php endforeach ?>
       </div>
+    </div>
+  </section>
+
+  <?php
+    $features = get_field("bl-features");
+  ?>
+
+  <section class="block features">
+
+    <div class="container">
+
+      <div class="block__title-container">
+        <span class="block__decor block__decor--left" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+        <h2 class="block__title"><?php echo $features['title'] ?></h2>
+        <span class="block__decor block__decor--right" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+      </div>
+
+      <ul class="features__list">
+        <?php foreach ($features['list'] as $item): ?>
+          <li class="features__item">
+            <div class="features__icon" style="background-image: url(<?php echo $theme_uri."/images/icons/icon-features-".$item['icon'].".png" ?>);"></div>
+            <div class="features__text"><?php echo $item['text'] ?></div>
+          </li>
+        <?php endforeach ?>
+      </ul>
     </div>
   </section>
 

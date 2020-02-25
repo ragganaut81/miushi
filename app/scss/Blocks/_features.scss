@@ -1,0 +1,31 @@
+.features {
+  padding-top: 80px;
+}
+
+.features__list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+.features__icon {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.features__text {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 28px;
+  color: #4c4c4c;
+}
