@@ -1,0 +1,36 @@
+.footer {
+  padding-top: 70px;
+  padding-bottom: 60px;
+  min-height: 100px;//temp
+  background-color: $blue-dark;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  color: $blue-light;
+}
+
+.footer__privacy {
+  padding-left: 35px;
+  font-size: 12px;
+  color: $blue-light;
+  text-decoration: underline;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    margin-left: 12px;
+    opacity: 0.5;
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer__social-icon {
+  width: 27px;
+  height: 27px;
+}
