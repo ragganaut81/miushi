@@ -176,6 +176,52 @@
     </div>
   </section>
 
+  <?php
+    $reviews = get_field("bl-reviews");
+  ?>
+
+  <!-- <section class="block reviews">
+
+    <div class="container">
+
+      <div class="block__title-container">
+        <span class="block__decor block__decor--left" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+        <h2 class="block__title"><?php echo $reviews['title'] ?></h2>
+        <span class="block__decor block__decor--right" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <?php
+    $feedback = get_field("bl-feedback");
+  ?>
+
+  <section class="feedback">
+
+    <h2 class="feedback__title sr-only">Обратная связь</h2>
+    <div class="container">
+      <div class="feedback__content">
+        <p class="feedback__small-text"><?php echo $feedback['small-text'] ?></p>
+        <p class="feedback__big-text"><?php echo $feedback['big-text'] ?></p>
+
+        <form class="feedback__form">
+          <div class="row">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="text" name="telephone" placeholder="Телефон" required>
+            <button class="feedback__button button">Отправить</button>
+          </div>
+        </form>
+        <p class="feedback__text">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.</p>
+      </div>
+    </div>
+  </section>
+
 
 <?php wp_footer(); ?>
 

@@ -22,13 +22,24 @@ body {
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
+		// &:focus:required:invalid {
+		// 	border-color: red;
+		// }
+		// &:required:valid {
+		// 	border-color: green;
+		// }
 	}
+  @-webkit-keyframes autofill {
+    to {
+      color: inherit;
+      background: transparent;
+    }
+  }
+
+  input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+  }
 }
 
 img {
@@ -140,3 +151,4 @@ button.owl-dot {
 @import "blocks/card";
 @import "blocks/extra";
 @import "blocks/features";
+@import "blocks/feedback";
