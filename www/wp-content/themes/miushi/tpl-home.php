@@ -222,6 +222,33 @@
     </div>
   </section>
 
+  <?php
+    $aboutUs = get_field("bl-about-us");
+  ?>
 
-<?php wp_footer(); ?>
+  <section class="about-us">
+
+    <div class="container">
+
+      <div class="block__title-container">
+        <span class="block__decor block__decor--left" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+        <h2 class="block__title"><?php echo $aboutUs['title'] ?></h2>
+        <span class="block__decor block__decor--right" style="background-image: url(<?php echo $theme_uri; ?>/images/title-decor.png);"></span>
+      </div>
+
+      <h3 class="about-us__title"><?php echo $aboutUs['text-title'] ?></h3>
+
+      <div class="row no-gutters">
+        <div class="col-9">
+          <div class="about-us__text"><?php echo $aboutUs['text'] ?></div>
+        </div>
+        <div class="col-3">
+          <div class="about-us__img" style="background-image: url(<?php echo $aboutUs['img']; ?>);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<?php get_footer(); ?>
+
 
